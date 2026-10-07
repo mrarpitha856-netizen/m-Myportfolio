@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio of Arpitha M R - Full-Stack Software Engineer building scalable, performant web applications with modern architecture.">
+    <meta name="keywords"
+        content="Software Engineer, Portfolio, Full-Stack Developer, Pixel Art, Web Development, JavaScript, React, Node.js">
+    <meta name="author" content="Arpitha M R">
+
+    <title>Arpitha M R | Software Engineer Portfolio</title>
+
+    <!-- Google Fonts: Pixel & Arcade Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ========================================================= -->
+    <!-- MOBILE TOP HEADER BAR (Visible only on mobile/tablet)     -->
+    <!-- ========================================================= -->
+    <header id="mobile-top-bar" class="mobile-top-bar">
+        <div class="mobile-top-container">
+            <a href="#hero" class="mobile-brand-logo" aria-label="Home">
+                &lt;ARPITHA.DEV /&gt;
+            </a>
+
+            <div class="mobile-top-actions">
+                <!-- Mobile Theme Toggle -->
+                <button id="mobile-theme-toggle" class="mobile-theme-btn" type="button" aria-label="Toggle Night Mode"
+                    title="Toggle Theme">
+                    <span class="toggle-icon sun-icon" aria-hidden="true">&#9728;</span>
+                    <span class="toggle-icon moon-icon" aria-hidden="true">&#9790;</span>
+                </button>
+
+                <!-- Mobile Hamburger Button -->
+                <button id="mobile-menu-btn" class="mobile-menu-toggle" type="button"
+                    aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="vertical-navbar">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="sr-only">Toggle Menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Backdrop Overlay -->
+    <div id="sidebar-backdrop" class="sidebar-backdrop" aria-hidden="true"></div>
+
+    <!-- ========================================================= -->
+    <!-- VERTICAL NAVIGATION BAR (LEFT SIDE OF SCREEN)             -->
+    <!-- Pixel art styled, accessible, responsive sidebar          -->
+    <!-- ========================================================= -->
+    <aside id="vertical-navbar" class="vertical-sidebar" aria-label="Sidebar Navigation">
+        <!-- Close button for mobile screens -->
+        <button id="sidebar-close-btn" class="sidebar-close-btn" type="button" aria-label="Close navigation sidebar">
+            <span>[X] CLOSE</span>
+        </button>
+
+        <!-- Sidebar Top Header / Player Profile Card -->
+        <div class="sidebar-profile-card">
+            <div class="sidebar-brand">
+                <a href="#hero" class="brand-link" aria-label="Arpitha Developer Home">
+                    <span class="brand-bracket">&lt;</span>
+                    <span class="brand-text">ARPITHA.DEV</span>
+                    <span class="brand-bracket">/&gt;</span>
+                </a>
+            </div>
+            <div class="player-status-badge">
+                <span class="online-led" aria-hidden="true"></span>
+                <span class="player-tag">PLAYER 1: READY</span>
+            </div>
+            <div class="player-role-sub">LVL.99 FULL-STACK ENG</div>
+        </div>
+
+        <!-- Section Navigation Header -->
+        <div class="sidebar-menu-header">
+            <span class="menu-header-tag">&lt;SELECT QUEST&gt;</span>
+        </div>
+
+        <!-- Vertical Navigation Links List -->
+        <nav class="sidebar-nav" aria-label="Primary Navigation">
+            <ul class="sidebar-menu-list" id="sidebar-menu-list">
+                <!-- 1. Home -->
+                <li class="sidebar-menu-item">
+                    <a href="#hero" class="sidebar-link active" id="nav-link-hero" aria-current="page">
+                        <span class="nav-cursor" aria-hidden="true">&#9654;</span>
+                        <span class="nav-icon" aria-hidden="true">&#127968;</span>
+                        <span class="nav-label">Home</span>
+                        <span class="nav-badge">01</span>
+                    </a>
+                </li>
+
+                <!-- 2. About Me -->
+                <li class="sidebar-menu-item">
+                    <a href="#about" class="sidebar-link" id="nav-link-about">
+                        <span class="nav-cursor" aria-hidden="true">&#9654;</span>
+                        <span class="nav-icon" aria-hidden="true">&#128100;</span>
+                        <span class="nav-label">About Me</span>
+                        <span class="nav-badge">02</span>
+                    </a>
+                </li>
+
+                <!-- 3. Skills -->
+                <li class="sidebar-menu-item">
+                    <a href="#skills" class="sidebar-link" id="nav-link-skills">
+                        <span class="nav-cursor" aria-hidden="true">&#9654;</span>
+                        <span class="nav-icon" aria-hidden="true">&#9889;</span>
+                        <span class="nav-label">Skills</span>
+                        <span class="nav-badge">03</span>
+                    </a>
+                </li>
+
+                <!-- 4. Timeline -->
+                <li class="sidebar-menu-item">
+                    <a href="#timeline" class="sidebar-link" id="nav-link-timeline">
+                        <span class="nav-cursor" aria-hidden="true">&#9654;</span>
+                        <span class="nav-icon" aria-hidden="true">&#9203;</span>
+                        <span class="nav-label">Timeline</span>
+                        <span class="nav-badge">04</span>
+                    </a>
+                </li>
+
+                <!-- 5. Projects -->
+                <li class="sidebar-menu-item">
+                    <a href="#projects" class="sidebar-link" id="nav-link-projects">
+                        <span class="nav-cursor" aria-hidden="true">&#9654;</span>
+                        <span class="nav-icon" aria-hidden="true">&#127918;</span>
+                        <span class="nav-label">Projects</span>
+                        <span class="nav-badge">05</span>
+                    </a>
+                </li>
+
+                <!-- 6. Testimonials -->
+                <li class="sidebar-menu-item">
+                    <a href="#testimonials" class="sidebar-link" id="nav-link-testimonials">
+                        <span class="nav-cursor" aria-hidden="true">&#9654;</span>
+                        <span class="nav-icon" aria-hidden="true">&#9733;</span>
+                        <span class="nav-label">Testimonials</span>
+                        <span class="nav-badge">06</span>
+                    </a>
+                </li>
+
+                <!-- 7. Chat -->
+                <li class="sidebar-menu-item">
+                    <a href="#chat" class="sidebar-link" id="nav-link-chat">
+                        <span class="nav-cursor" aria-hidden="true">&#9654;</span>
+                        <span class="nav-icon" aria-hidden="true">&#128172;</span>
+                        <span class="nav-label">Chat</span>
+                        <span class="nav-badge">07</span>
+                    </a>
+                </li>
+
+                <!-- 8. Contact -->
+                <li class="sidebar-menu-item">
+                    <a href="#contact" class="sidebar-link" id="nav-link-contact">
+                        <span class="nav-cursor" aria-hidden="true">&#9654;</span>
+                        <span class="nav-icon" aria-hidden="true">&#9993;</span>
+                        <span class="nav-label">Contact</span>
+                        <span class="nav-badge">08</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Sidebar Bottom Controls Dock -->
+        <div class="sidebar-footer-dock">
+            <!-- Night Mode Toggle inside Sidebar -->
+            <button id="theme-toggle" class="theme-toggle-btn sidebar-theme-btn" type="button"
+                aria-label="Toggle Night Mode" aria-pressed="false"
+                title="Toggle Theme (Default automatically adapts to browser mode)">
+                <span class="toggle-icon sun-icon" aria-hidden="true">&#9728;</span>
+                <span class="toggle-icon moon-icon" aria-hidden="true">&#9790;</span>
+                <span class="theme-mode-label" id="theme-label">MODE: AUTO</span>
+            </button>
+
+            <!-- SFX Sound Toggle -->
+            <button id="sound-toggle" class="pixel-sound-btn" type="button" aria-label="Toggle 8-bit sound effects"
+                title="Toggle 8-bit Sound FX">
+                <span id="sound-icon" aria-hidden="true">&#128266;</span>
+                <span id="sound-text">SFX: ON</span>
+            </button>
+
+            <!-- Retro System Status -->
+            <div class="sidebar-sys-status">
+                <span>SYS: OK &bull; PORT: 8000</span>
+            </div>
+        </div>
+    </aside>
+
+    <!-- ========================================================= -->
+    <!-- MAIN CONTENT & FOOTER LAYOUT WRAPPER (Shifted on Desktop) -->
+    <!-- ========================================================= -->
+    <div class="main-layout-wrapper">
+
+        <!-- ========================================================= -->
+        <!-- MAIN CONTENT AREA                                         -->
+        <!-- ========================================================= -->
+        <main id="main-content">
+
+            <!-- ===================================================== -->
+            <!-- 1. HERO SECTION (PIXEL ART STYLE + BACKGROUND IMAGE)  -->
+            <!-- ===================================================== -->
+            <section id="hero" class="hero-section" aria-labelledby="hero-title">
+                <div class="container hero-container">
+
+                    <!-- Left Column: Retro RPG Window / Character Dialogue -->
+                    <div class="pixel-hero-card">
+                        <!-- Retro Window Header -->
+                        <div class="pixel-card-header">
+                            <div class="window-status">
+                                <span class="status-indicator"></span>
+                                <span>PLAYER_1: ONLINE</span>
+                            </div>
+                            <div class="window-controls">
+                                <span class="window-btn btn-min"></span>
+                                <span class="window-btn btn-max"></span>
+                                <span class="window-btn btn-close"></span>
+                            </div>
+                        </div>
+
+                        <!-- Retro Window Body -->
+                        <div class="pixel-card-body">
+                            <!-- Welcome Badge -->
+                            <div class="hero-pixel-badge">
+                                <span class="badge-icon">&#128126;</span>
+                                <span>LEVEL 99 SOFTWARE ENGINEER</span>
+                            </div>
+
+                            <!-- Welcoming Title (Semantic H1) -->
+                            <h1 id="hero-title" class="hero-title">
+                                WELCOME, VISITOR! I'M <br>
+                                <span class="pixel-name-highlight">ARPITHA M R</span>
+                            </h1>
+
+                            <!-- Subtitle -->
+                            <h2 class="hero-subtitle">
+                                <span>&#9874;</span> FULL-STACK ARCHITECT &amp; DEVELOPER <span>&#9874;</span>
+                            </h2>
+
+                            <!-- Brief Tagline Dialogue Box -->
+                            <div class="pixel-dialogue-box">
+                                <p class="hero-tagline">
+                                    "Crafting resilient web architectures, scalable backend systems, and pixel-crafted
+                                    user interfaces. Ready to tackle demanding quests and build impactful software
+                                    solutions."
+                                    <span class="pixel-cursor">&#9612;</span>
+                                </p>
+                            </div>
+
+                            <!-- Pixel Stats / HUD Bar -->
+                            <div class="pixel-stats-hud" aria-label="Player attributes">
+                                <div class="stat-bar-group">
+                                    <div class="stat-label-row">
+                                        <span>HP (HEALTH)</span>
+                                        <span>100/100</span>
+                                    </div>
+                                    <div class="pixel-meter" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                                        aria-valuemax="100">
+                                        <span class="meter-fill hp-fill"></span>
+                                    </div>
+                                </div>
+                                <div class="stat-bar-group">
+                                    <div class="stat-label-row">
+                                        <span>MP (CODE MANA)</span>
+                                        <span>100/100</span>
+                                    </div>
+                                    <div class="pixel-meter" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                                        aria-valuemax="100">
+                                        <span class="meter-fill mp-fill"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Pixel Call-To-Action Group -->
+                            <div class="hero-cta-group">
+                                <a href="#projects" class="pixel-btn pixel-btn-primary" id="btn-view-work">
+                                    <span>&#9654; VIEW PROJECTS</span>
+                                </a>
+                                <a href="Arpitha_Resume.pdf" class="pixel-btn pixel-btn-outline" id="btn-resume"
+                                    download target="_blank" rel="noopener noreferrer">
+                                    <span>&#128190; RESUME.PDF</span>
+                                </a>
+                                <a href="#contact" class="pixel-btn pixel-btn-secondary" id="btn-contact-hero">
+                                    <span>&#9993; GET IN TOUCH</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Retro Terminal & Decorative Visual -->
+                    <div class="hero-visual">
+                        <div class="pixel-terminal-frame">
+                            <div class="terminal-header">
+                                <span>ARCADE_SYSTEM_V2.0</span>
+                                <span>STATUS: ACTIVE</span>
+                            </div>
+                            <div class="terminal-screen">
+                                <!-- Decorative Image Panel -->
+                                <div class="hero-deco-image-wrap">
+                                    <img src="profile-pic.jpeg" alt="Arpitha M R - Software Engineer"
+                                        class="hero-deco-img" loading="eager" id="hero-deco-photo">
+                                    <div class="hero-deco-overlay">
+                                        <span class="deco-scan-label">SCANNING WORLD...</span>
+                                    </div>
+                                </div>
+
+                                <!-- System Profile Specs -->
+                                <div class="terminal-info">
+                                    <div class="terminal-line">
+                                        <span class="terminal-key">DEV:</span>
+                                        <span class="terminal-val">ARPITHA M R</span>
+                                    </div>
+                                    <div class="terminal-line">
+                                        <span class="terminal-key">CLASS:</span>
+                                        <span class="terminal-val">ENGINEER</span>
+                                    </div>
+                                    <div class="terminal-line">
+                                        <span class="terminal-key">STACK:</span>
+                                        <span class="terminal-val">REACT / NODE / CLOUD</span>
+                                    </div>
+                                    <div class="terminal-line">
+                                        <span class="terminal-key">ALIGNMENT:</span>
+                                        <span class="terminal-val">CLEAN CODE &bull; DRY</span>
+                                    </div>
+                                </div>
+
+                                <!-- Pixel Badges -->
+                                <div class="pixel-badges-row">
+                                    <span class="pixel-badge">&#128187; FULLSTACK</span>
+                                    <span class="pixel-badge">&#9889; FAST</span>
+                                    <span class="pixel-badge">&#9881; SCALABLE</span>
+                                    <span class="pixel-badge">&#128293; INNOVATIVE</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!-- END HERO SECTION -->
+
+
+            <!-- ===================================================== -->
+            <!-- ===================================================== -->
+            <!-- 2. ABOUT ME SECTION (PIXEL ART STYLE)                 -->
+            <!-- ===================================================== -->
+            <section id="about" class="section about-section" aria-labelledby="about-heading">
+                <div class="container about-container">
+                    <header class="section-header">
+                        <span class="section-tag">&lt;character-bio&gt;</span>
+                        <h2 id="about-heading" class="section-title">About Me</h2>
+                    </header>
+
+                    <div class="about-grid-modern">
+                        <!-- Left: Pixel Art Profile Avatar & Character Sheet -->
+                        <div class="about-profile-col">
+                            <div class="pixel-avatar-card">
+                                <!-- Avatar Window Header -->
+                                <div class="avatar-card-header">
+                                    <span class="avatar-status-dot"></span>
+                                    <span>PLAYER_PROFILE.PNG</span>
+                                </div>
+
+                                <!-- Avatar Frame & Image -->
+                                <div class="pixel-avatar-frame">
+                                    <img src="profile-pic.jpeg" alt="Arpitha M R - Software Engineer"
+                                        class="about-avatar-img" loading="lazy">
+                                    <div class="avatar-pixel-tag">LVL.99 DEV</div>
+                                </div>
+
+                                <!-- Character Sheet Spec Table -->
+                                <div class="character-stats-sheet">
+                                    <div class="stat-sheet-row">
+                                        <span class="stat-sheet-label">NAME:</span>
+                                        <span class="stat-sheet-val">Arpitha M R</span>
+                                    </div>
+                                    <div class="stat-sheet-row">
+                                        <span class="stat-sheet-label">CLASS:</span>
+                                        <span class="stat-sheet-val">Full-Stack Engineer</span>
+                                    </div>
+                                    <div class="stat-sheet-row">
+                                        <span class="stat-sheet-label">EXP:</span>
+                                        <span class="stat-sheet-val">Production Systems</span>
+                                    </div>
+                                    <div class="stat-sheet-row">
+                                        <span class="stat-sheet-label">STATUS:</span>
+                                        <span class="stat-sheet-val status-val-ready">&#9679; Available for Hire</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right: Bio, Career Highlights & Personal Interests -->
+                        <div class="about-details-col">
+                            <!-- Short Bio Box -->
+                            <div class="about-bio-box pixel-card">
+                                <h3 class="about-subtitle">
+                                    <span class="pixel-arrow-icon">&#9654;</span>
+                                    Engineering With Passion &amp; Precision
+                                </h3>
+                                <p class="about-bio-text">
+                                    Hello! I'm <strong>Arpitha M R</strong>, a full-stack software engineer dedicated to
+                                    building robust, scalable web architectures and high-impact digital experiences.
+                                    With a strong foundation in computer science and clean code principles, I bridge the
+                                    gap between reliable backend infrastructure and pixel-crafted user interfaces.
+                                </p>
+                                <p class="about-bio-text">
+                                    Whether developing full-stack applications, architecting performant REST APIs, or
+                                    solving algorithmic challenges, I thrive on turning complex problem sets into
+                                    elegant, maintainable solutions.
+                                </p>
+                            </div>
+
+                            <!-- Career Highlights -->
+                            <div class="about-highlights-wrapper">
+                                <h4 class="highlights-heading">&lt;CAREER HIGHLIGHTS&gt;</h4>
+                                <div class="career-highlights-grid">
+                                    <!-- Highlight 1 -->
+                                    <div class="highlight-card">
+                                        <div class="highlight-card-header">
+                                            <span class="highlight-icon">&#9889;</span>
+                                            <span class="highlight-badge">FULL-STACK</span>
+                                        </div>
+                                        <h5 class="highlight-title">End-to-End Development</h5>
+                                        <p class="highlight-desc">
+                                            Engineered modern web applications with modular frontend architectures
+                                            (React/TypeScript) and performant backend services (Node.js/Express,
+                                            Python).
+                                        </p>
+                                    </div>
+
+                                    <!-- Highlight 2 -->
+                                    <div class="highlight-card">
+                                        <div class="highlight-card-header">
+                                            <span class="highlight-icon">&#128737;</span>
+                                            <span class="highlight-badge">ARCHITECTURE</span>
+                                        </div>
+                                        <h5 class="highlight-title">Clean Systems &amp; APIs</h5>
+                                        <p class="highlight-desc">
+                                            Designed scalable RESTful APIs, optimized database schemas (PostgreSQL,
+                                            MongoDB), and implemented clean architectural patterns for maintainability.
+                                        </p>
+                                    </div>
+
+                                    <!-- Highlight 3 -->
+                                    <div class="highlight-card">
+                                        <div class="highlight-card-header">
+                                            <span class="highlight-icon">&#128640;</span>
+                                            <span class="highlight-badge">AGILE &amp; DEVOPS</span>
+                                        </div>
+                                        <h5 class="highlight-title">Collaborative Delivery</h5>
+                                        <p class="highlight-desc">
+                                            Active collaborator in sprint ceremonies, CI/CD automated deployment
+                                            workflows, peer code reviews, and containerization with Docker.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Personal Interests / Side Quests -->
+                            <div class="about-interests-wrapper">
+                                <h4 class="interests-heading">&lt;PERSONAL INTERESTS &amp; SIDE QUESTS&gt;</h4>
+                                <div class="interests-tags-list">
+                                    <span class="interest-pill">
+                                        <span class="pill-icon">&#127918;</span> Retro &amp; Indie Gaming
+                                    </span>
+                                    <span class="interest-pill">
+                                        <span class="pill-icon">&#9749;</span> Open-Source Tinkering
+                                    </span>
+                                    <span class="interest-pill">
+                                        <span class="pill-icon">&#127911;</span> Lo-Fi Music &amp; Deep Focus
+                                    </span>
+                                    <span class="interest-pill">
+                                        <span class="pill-icon">&#128218;</span> Algorithms &amp; System Design
+                                    </span>
+                                    <span class="interest-pill">
+                                        <span class="pill-icon">&#127793;</span> Tech Podcasts &amp; Agility
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- About CTA Buttons -->
+                            <div class="about-cta-bar">
+                                <a href="Arpitha_Resume.pdf" class="pixel-btn pixel-btn-primary" download
+                                    target="_blank" rel="noopener noreferrer">
+                                    <span>&#128190; DOWNLOAD RESUME</span>
+                                </a>
+                                <a href="#contact" class="pixel-btn pixel-btn-outline">
+                                    <span>&#9993; START A QUEST</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END ABOUT SECTION -->
+
+
+            <!-- ===================================================== -->
+            <!-- 3. SKILLS SECTION (PIXEL ART XP SYSTEM)              -->
+            <!-- Categorized skill cards with animated XP bars,       -->
+            <!-- pixel-art icons, level badges & hover effects.        -->
+            <!-- ===================================================== -->
+            <section id="skills" class="section skills-section" aria-labelledby="skills-heading">
+                <div class="container skills-container">
+
+                    <!-- Section Header -->
+                    <header class="section-header">
+                        <span class="section-tag">&lt;skills.loadout&gt;</span>
+                        <h2 id="skills-heading" class="section-title">Skills &amp; Loadout</h2>
+                        <p class="section-subtitle">Character equipped with multi-class proficiencies. Select a category
+                            to inspect stats.</p>
+                    </header>
+
+                    <!-- ── Category Filter Tabs ─────────────────────── -->
+                    <!-- Clicking a tab filters visible skill groups     -->
+                    <div class="skills-tab-bar" role="tablist" aria-label="Skill categories">
+                        <button class="skill-tab active" role="tab" data-tab="all" aria-selected="true"
+                            id="tab-all">&#127918; ALL SKILLS</button>
+                        <button class="skill-tab" role="tab" data-tab="languages" aria-selected="false"
+                            id="tab-languages">&#128187; LANGUAGES</button>
+                        <button class="skill-tab" role="tab" data-tab="frameworks" aria-selected="false"
+                            id="tab-frameworks">&#9881; FRAMEWORKS</button>
+                        <button class="skill-tab" role="tab" data-tab="tools" aria-selected="false"
+                            id="tab-tools">&#128295; TOOLS &amp; DEVOPS</button>
+                        <button class="skill-tab" role="tab" data-tab="databases" aria-selected="false"
+                            id="tab-databases">&#128200; DATABASES</button>
+                    </div>
+
+                    <!-- ── Skill Cards Grid ─────────────────────────── -->
+                    <div class="skills-mastery-grid" id="skills-mastery-grid">
+
+                        <!-- ─── LANGUAGES ──────────────────────────── -->
+                        <!-- Each card: icon + name + XP bar + level badge -->
+
+                        <!-- JavaScript: Primary weapon, mastery level MAX -->
+                        <article class="skill-card" data-category="languages" role="tabpanel">
+                            <div class="skill-card-header">
+                                <span class="skill-icon" aria-hidden="true">&#128257;</span>
+                                <span class="skill-level-badge badge-s">S RANK</span>
+                            </div>
+                            <h3 class="skill-name">JavaScript</h3>
+                            <p class="skill-sub">ES6+ · DOM · Async/Await</p>
+                            <!-- XP bar: data-xp sets the fill width via JS/CSS -->
+                            <div class="skill-xp-track" aria-label="Skill level: 95 percent">
+                                <div class="skill-xp-fill" data-xp="95" style="--xp-target: 95%"></div>
+                            </div>
+                            <div class="skill-xp-label">
+                                <span class="xp-label-text">XP</span>
+                                <span class="xp-label-val">9500 / 10000</span>
+                            </div>
+                        </article>
+
+                        <!-- TypeScript: Strong typed evolution of JS -->
+                        <article class="skill-card" data-category="languages" role="tabpanel">
+                            <div class="skill-card-header">
+                                <span class="skill-icon" aria-hidden="true">&#128736;</span>
+                                <span class="skill-level-badge badge-a">A RANK</span>
+                            </div>
+                            <h3 class="skill-name">TypeScript</h3>
+                            <p class="skill-sub">Types · Interfaces · Generics</p>
+                            <div class="skill-xp-track" aria-label="Skill level: 88 percent">
+                                <div class="skill-xp-fill" data-xp="88" style="--xp-target: 88%"></div>
+                            </div>
+                            <div class="skill-xp-label">
+                                <span class="xp-label-text">XP</span>
+                                <span class="xp-label-val">8800 / 10000</span>
+                            </div>
+                        </article>
+
+                        <!-- Python: Versatile scripting & backend language -->
+                        <article class="skill-card" data-category="languages" role="tabpanel">
+                            <div class="skill-card-header">
+                                <span class="skill-icon" aria-hidden="true">&#128013;</span>
+                                <span class="skill-level-badge badge-a">A RANK</span>
+                            </div>
+                            <h3 class="skill-name">Python</h3>
+                            <p class="skill-sub">Scripting · Automation · ML libs</p>
+                            <div class="skill-xp-track" aria-label="Skill level: 82 percent">
+                                <div class="skill-xp-fill" data-xp="82" style="--xp-target: 82%"></div>
+                            </div>
+                            <div class="skill-xp-label">
+                                <span class="xp-label-text">XP</span>
+                                <span class="xp-label-val">8200 / 10000</span>
+                            </div>
+                        </article>
+
+                        <!-- Java: Enterprise OOP, strong fundamentals -->
+                        <article class="skill-card" data-category="languages" role="tabpanel">
+                            <div class="skill-card-header">
+                                <span class="skill-icon" aria-hidden="true">&#9749;</span>
+                                <span class="skill-level-badge badge-b">B RANK</span>
+                            </div>
+                            <h3 class="skill-name">Java</h3>
+                            <p class="skill-sub">OOP · Collections · Spring basics</p>
+                            <div class="skill-xp-track" aria-label="Skill level: 73 percent">
+                                <div class="skill-xp-fill" data-xp="73" style="--xp-target: 73%"></div>
+                            </div>
+                            <div class="skill-xp-label">
+                                <span class="xp-label-text">XP</span>
+                                <span class="xp-label-val">7300 / 10000</span>
+                            </div>
+                        </article>
+
+                        <!-- HTML5/CSS3: The canvas of the web -->
+                        <article class="skill-card" data-category="languages" role="tabpanel">
+                            <div class="skill-card-header">
+                                <span class="skill-icon" aria-hidden="true">&#127760;</span>
+                                <span class="skill-level-badge badge-s">S RANK</span>
+                            </div>
+                            <h3 class="skill-name">HTML5 / CSS3</h3>
+                            <p class="skill-sub">Semantic · Flexbox · Grid · Animations</p>
+                            <div class="skill-xp-track" aria-label="Skill level: 96 percent">
+                                <div class="skill-xp-fill" data-xp="96" style="--xp-target: 96%"></div>
+                            </div>
+                            <div class="skill-xp-label">
+                                <span class="xp-label-text">XP</span>
+                                <span class="xp-label-val">9600 / 10000</span>
+                            </div>
+                        </article>
+
+                        <!-- SQL: Data query language -->
+                        <article class="skill-card" data-category="languages" role="tabpanel">
+                            <div class="skill-card-header">
+                                <span class="skill-icon" aria-hidden="true">&#128202;</span>
+                                <span class="skill-level-badge badge-a">A RANK</span>
+                            </div>
+                            <h3 class="skill-name">SQL</h3>
+                            <p class="skill-sub">Joins · Indexes · Stored Procedures</p>
+                            <div class="skill-xp-track" aria-label="Skill level: 84 percent">
+                                <div class="skill-xp-fill" data-xp="84" style="--xp-target: 84%"></div>
+                            </div>
+                            <div class="skill-xp-label">
+                                <span class="xp-label-text">XP</span>
+                                <span class="xp-label-val">8400 / 10000</span>
+                            </div>
+                        </article>
+
+                        <!-- ─── FRAMEWORKS & LIBRARIES ──────────────── -->
+
+                        <!-- React.js: Component-based UI mastery -->
+                        <article class="skill-card" data-category="frameworks" role="tabpanel">
+                            <div class="skill-card-header">
+                                <span class="skill-icon" aria-hidden="true">&#128150;</span>
+                                <span class="skill-level-badge badge-s">S RANK</span>
+                            </div>
+                            <h3 class="skill-name">React.js</h3>
+                            <p class="skill-sub">Hooks · Context · React Router</p>
+                            <div class="skill-xp-track" aria-label="Skill level: 93 percent">
+                                <div class="skill-xp-fill" data-xp="93" style="--xp-target: 93%"></div>
+                            </div>
+                            <div class="skill-xp-label">
+                                <span class="xp-label-text">XP</span>
+                                <span class="xp-label-val">9300 / 10000</span>
+                            </div>
+                        </article>
+
+                        <!-- Node.js / Express: Backend server mastery -->
+                        <article class="skill-card" data-category="frameworks" role="tabpanel">
+                            <div class="skill-card-header">
+                                <span class="skill-icon" aria-hidden="true">&#9881;</span>
+                                <span class="skill-level-badge badge-a">A RANK</span>
+                            </div>
+                            <h3 class="skill-name">Node.js / Express</h3>
+                            <p class="skill-sub">REST APIs · Middleware · Auth</p>
+                            <div class="skill-xp-track" aria-label="Skill level: 89 percent">
+                                <div class="skill-xp-fill" data-xp="89" style="--xp-target: 89%"></div>
+                            </div>
+                            <div class="skill-xp-label">
+                                <span class="xp-label-text">XP</span>
+                                <span class="xp-label-val">8900 / 10000</span>
+                            </div>
+                        </article>
+
+                        <!-- Next.js: Full-stack React framework -->
+                        <article class="skill-card" data-category="frameworks" role="tabpanel">
+                            <div class="skill-card-header">
+                                <span class="skill-icon" aria-hidden="true">&#9193;</span>
+                                <span class="skill-level-badge badge-a">A RANK</span>
+                            </div>
+                            <h3 class="skill-name">Next.js</h3>
+                            <p class="skill-sub">SSR · SSG · App Router</p>
+                            <div class="skill-xp-track" aria-label="Skill level: 80 percent">
+                                <div class="skill-xp-fill" data-xp="80" style="--xp-target: 80%"></div>
+                            </div>
+                            <div class="skill-xp-label">
+                                <span class="xp-label-text">XP</span>
+                                <span class="xp-label-val">8000 / 10000</span>
+                            </div>
+                        </article>
+
+                        <!-- RESTful API Design -->
+                        <article class="skill-card" data-category="frameworks" role="tabpanel">
+                            <div class="skill-card-header">
+                                <span class="skill-icon" aria-hidden="true">&#128301;</span>
+                                <span class="skill-level-badge badge-a">A RANK</span>
+                            </div>
+                            <h3 class="skill-name">RESTful APIs</h3>
+                            <p class="skill-sub">Design · OpenAPI · JWT · OAuth</p>
+                            <div class="skill-xp-track" aria-label="Skill level: 90 percent">
+                                <div class="skill-xp-fill" data-xp="90" style="--xp-target: 90%"></div>
+                            </div>
+                            <div class="skill-xp-label">
+                                <span class="xp-label-text">XP</span>
+                                <span class="xp-label-val">9000 / 10000</span>
+                            </div>
+                        </article>
+
+                        <!-- ─── TOOLS & DEVOPS ──────────────────────── -->
+
+                        <!-- Git/GitHub: Version control -->
+                        <article class="skill-card" data-category="tools" role="tabpanel">
+                            <div class="skill-card-header">
+                                <span class="skill-icon" aria-hidden="true">&#128038;</span>
+                                <span class="skill-level-badge badge-s">S RANK</span>
+                            </div>
+                            <h3 class="skill-name">Git / GitHub</h3>
+                            <p class="skill-sub">Branching · PRs · CI Workflows</p>
+                            <div class="skill-xp-track" aria-label="Skill level: 94 percent">
+                                <div class="skill-xp-fill" data-xp="94" style="--xp-target: 94%"></div>
+                            </div>
+                            <div class="skill-xp-label">
+                                <span class="xp-label-text">XP</span>
+                                <span class="xp-label-val">9400 / 10000</span>
+                            </div>
+                        </article>
+
+                        <!-- Docker: Container orchestration -->
+                        <article class="skill-card" data-category="tools" role="tabpanel">
+                            <div class="skill-card-header">
+                                <span class="skill-icon" aria-hidden="true">&#128674;</span>
+                                <span class="skill-level-badge badge-b">B RANK</span>
+                            </div>
+                            <h3 class="skill-name">Docker</h3>
+                            <p class="skill-sub">Images · Containers · Compose</p>
+                            <div class="skill-xp-track" aria-label="Skill level: 75 percent">
+                                <div class="skill-xp-fill" data-xp="75" style="--xp-target: 75%"></div>
+                            </div>
+                            <div class="skill-xp-label">
+                                <span class="xp-label-text">XP</span>
+                                <span class="xp-label-val">7500 / 10000</span>
+                            </div>
+                        </article>
+
+                        <!-- VS Code: IDE of choice -->
+                        <article class="skill-card" data-category="tools" role="tabpanel">
+                            <div class="skill-card-header">
+                                <span class="skill-icon" aria-hidden="true">&#128295;</span>
+                                <span class="skill-level-badge badge-s">S RANK</span>
+                            </div>
+                            <h3 class="skill-name">VS Code</h3>
+                            <p class="skill-sub">Extensions · Debugging · Workspace</p>
+                            <div class="skill-xp-track" aria-label="Skill level: 97 percent">
+                                <div class="skill-xp-fill" data-xp="97" style="--xp-target: 97%"></div>
+                            </div>
+                            <div class="skill-xp-label">
+                                <span class="xp-label-text">XP</span>
+                                <span class="xp-label-val">9700 / 10000</span>
+                            </div>
+                        </article>
+
+                        <!-- Linux / Shell -->
+                        <article class="skill-card" data-category="tools" role="tabpanel">
+                            <div class="skill-card-header">
+                                <span class="skill-icon" aria-hidden="true">&#128421;</span>
+                                <span class="skill-level-badge badge-b">B RANK</span>
+                            </div>
+                            <h3 class="skill-name">Linux / Shell</h3>
+                            <p class="skill-sub">Bash · Scripting · Cron · SSH</p>
+                            <div class="skill-xp-track" aria-label="Skill level: 78 percent">
+                                <div class="skill-xp-fill" data-xp="78" style="--xp-target: 78%"></div>
+                            </div>
+                            <div class="skill-xp-label">
+                                <span class="xp-label-text">XP</span>
+                                <span class="xp-label-val">7800 / 10000</span>
+                            </div>
+                        </article>
+
+                        <!-- Postman: API Testing -->
+                        <article class="skill-card" data-category="tools" role="tabpanel">
+                            <div class="skill-card-header">
+                                <span class="skill-icon" aria-hidden="true">&#128240;</span>
+                                <span class="skill-level-badge badge-a">A RANK</span>
+                            </div>
+                            <h3 class="skill-name">Postman</h3>
+                            <p class="skill-sub">Collections · Environments · Tests</p>
+                            <div class="skill-xp-track" aria-label="Skill level: 85 percent">
+                                <div class="skill-xp-fill" data-xp="85" style="--xp-target: 85%"></div>
+                            </div>
+                            <div class="skill-xp-label">
+                                <span class="xp-label-text">XP</span>
+                                <span class="xp-label-val">8500 / 10000</span>
+                            </div>
+                        </article>
+
+                        <!-- ─── DATABASES & CLOUD ────────────────────── -->
+
+                        <!-- PostgreSQL: Relational powerhouse -->
+                        <article class="skill-card" data-category="databases" role="tabpanel">
+                            <div class="skill-card-header">
+                                <span class="skill-icon" aria-hidden="true">&#128225;</span>
+                                <span class="skill-level-badge badge-a">A RANK</span>
+                            </div>
+                            <h3 class="skill-name">PostgreSQL</h3>
+                            <p class="skill-sub">Schema Design · Queries · Indexes</p>
+                            <div class="skill-xp-track" aria-label="Skill level: 85 percent">
+                                <div class="skill-xp-fill" data-xp="85" style="--xp-target: 85%"></div>
+                            </div>
+                            <div class="skill-xp-label">
+                                <span class="xp-label-text">XP</span>
+                                <span class="xp-label-val">8500 / 10000</span>
+                            </div>
+                        </article>
+
+                        <!-- MongoDB: NoSQL document store -->
+                        <article class="skill-card" data-category="databases" role="tabpanel">
+                            <div class="skill-card-header">
+                                <span class="skill-icon" aria-hidden="true">&#127795;</span>
+                                <span class="skill-level-badge badge-a">A RANK</span>
+                            </div>
+                            <h3 class="skill-name">MongoDB</h3>
+                            <p class="skill-sub">Aggregation · Atlas · Mongoose</p>
+                            <div class="skill-xp-track" aria-label="Skill level: 82 percent">
+                                <div class="skill-xp-fill" data-xp="82" style="--xp-target: 82%"></div>
+                            </div>
+                            <div class="skill-xp-label">
+                                <span class="xp-label-text">XP</span>
+                                <span class="xp-label-val">8200 / 10000</span>
+                            </div>
+                        </article>
+
+                        <!-- MySQL -->
+                        <article class="skill-card" data-category="databases" role="tabpanel">
+                            <div class="skill-card-header">
+                                <span class="skill-icon" aria-hidden="true">&#128138;</span>
+                                <span class="skill-level-badge badge-b">B RANK</span>
+                            </div>
+                            <h3 class="skill-name">MySQL</h3>
+                            <p class="skill-sub">CRUD · Joins · Transactions</p>
+                            <div class="skill-xp-track" aria-label="Skill level: 78 percent">
+                                <div class="skill-xp-fill" data-xp="78" style="--xp-target: 78%"></div>
+                            </div>
+                            <div class="skill-xp-label">
+                                <span class="xp-label-text">XP</span>
+                                <span class="xp-label-val">7800 / 10000</span>
+                            </div>
+                        </article>
+
+                        <!-- Cloud Platforms -->
+                        <article class="skill-card" data-category="databases" role="tabpanel">
+                            <div class="skill-card-header">
+                                <span class="skill-icon" aria-hidden="true">&#9729;</span>
+                                <span class="skill-level-badge badge-b">B RANK</span>
+                            </div>
+                            <h3 class="skill-name">Cloud Platforms</h3>
+                            <p class="skill-sub">AWS · GCP · Vercel · Render</p>
+                            <div class="skill-xp-track" aria-label="Skill level: 72 percent">
+                                <div class="skill-xp-fill" data-xp="72" style="--xp-target: 72%"></div>
+                            </div>
+                            <div class="skill-xp-label">
+                                <span class="xp-label-text">XP</span>
+                                <span class="xp-label-val">7200 / 10000</span>
+                            </div>
+                        </article>
+
+                    </div>
+                    <!-- END skills-mastery-grid -->
+
+                    <!-- ── Overall Power Level Bar ───────────────────── -->
+                    <!-- Shows aggregate skill score / "power level"      -->
+                    <div class="skills-power-level-wrap">
+                        <div class="power-level-header">
+                            <span class="power-level-label">&#9889; TOTAL POWER LEVEL</span>
+                            <span class="power-level-score" id="power-level-display">LVL 85</span>
+                        </div>
+                        <div class="power-level-track" aria-label="Overall power level: 85 percent">
+                            <div class="power-level-fill" style="--xp-target: 85%"></div>
+                        </div>
+                        <div class="power-level-classes">
+                            <span class="class-tag">&#128187; FULLSTACK</span>
+                            <span class="class-tag">&#127968; ARCHITECT</span>
+                            <span class="class-tag">&#128295; TOOLSMITH</span>
+                            <span class="class-tag">&#128640; DEVOPS</span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!-- END SKILLS SECTION -->
+
+
+            <!-- ===================================================== -->
+            <!-- 4. TIMELINE SECTION                                   -->
+            <!-- Chronological cards for education, experience,        -->
+            <!-- and milestones. Rounded boxes + smooth hover effect.  -->
+            <!-- ===================================================== -->
+            <section id="timeline" class="timeline-section" aria-labelledby="timeline-heading">
+                <div class="container timeline-container">
+                    <header class="section-header">
+                        <span class="section-tag">&lt;experience&gt;</span>
+                        <h2 id="timeline-heading" class="section-title">Experience &amp; Education</h2>
+                        <p class="section-subtitle">Key milestones on the journey so far.</p>
+                    </header>
+
+                    <div class="timeline-track">
+
+                        <!-- Timeline Item 1: Current Role -->
+                        <article class="timeline-item" data-type="experience">
+                            <!-- Dot on the left spine line -->
+                            <div class="timeline-marker" aria-hidden="true"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2024 &ndash; Present</span>
+                                <h3 class="timeline-role">Software Engineer</h3>
+                                <h4 class="timeline-organization">Company / Organization Name</h4>
+                                <p class="timeline-description">
+                                    Architected and built responsive full-stack web applications, collaborated in
+                                    cross-functional agile teams, and improved system performance and maintainability
+                                    through clean architectural patterns.
+                                </p>
+                                <ul class="timeline-tags">
+                                    <li>Full Stack</li>
+                                    <li>React</li>
+                                    <li>Node.js</li>
+                                    <li>Agile</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <!-- Timeline Item 2: Internship -->
+                        <article class="timeline-item" data-type="experience">
+                            <div class="timeline-marker" aria-hidden="true"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2023 &ndash; 2024</span>
+                                <h3 class="timeline-role">Software Development Intern</h3>
+                                <h4 class="timeline-organization">Company / Organization Name</h4>
+                                <p class="timeline-description">
+                                    Implemented reusable UI components, integrated RESTful APIs, optimized database
+                                    queries, and participated in sprint reviews and code audits.
+                                </p>
+                                <ul class="timeline-tags">
+                                    <li>Web Development</li>
+                                    <li>REST APIs</li>
+                                    <li>Testing</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <!-- Timeline Item 3: Major Project Milestone -->
+                        <article class="timeline-item" data-type="experience">
+                            <div class="timeline-marker" aria-hidden="true"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2022</span>
+                                <h3 class="timeline-role">Major Project: Full-Stack Platform</h3>
+                                <h4 class="timeline-organization">Academic / Personal Project</h4>
+                                <p class="timeline-description">
+                                    Built a complete end-to-end web platform with user authentication, dynamic
+                                    dashboards, and cloud deployment &mdash; a key milestone in applying production-grade
+                                    software engineering practices.
+                                </p>
+                                <ul class="timeline-tags">
+                                    <li>React</li>
+                                    <li>Node.js</li>
+                                    <li>PostgreSQL</li>
+                                    <li>Docker</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <!-- Timeline Item 4: Education -->
+                        <article class="timeline-item" data-type="education">
+                            <div class="timeline-marker" aria-hidden="true"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2019 &ndash; 2023</span>
+                                <h3 class="timeline-role">Bachelor of Engineering in Computer Science</h3>
+                                <h4 class="timeline-organization">University / College Name</h4>
+                                <p class="timeline-description">
+                                    Focused on Computer Science fundamentals, data structures, algorithms, operating
+                                    systems, software engineering methodologies, and database systems.
+                                </p>
+                                <ul class="timeline-tags">
+                                    <li>Computer Science</li>
+                                    <li>Algorithms</li>
+                                    <li>Academic Excellence</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </section>
+            <!-- END TIMELINE SECTION -->
+
+
+            <!-- ===================================================== -->
+            <!-- 5. PROJECTS SECTION                                   -->
+            <!-- Each thumbnail card is clickable and opens a link.    -->
+            <!-- Gradient thumbnails + overlay text on hover.          -->
+            <!-- ===================================================== -->
+            <section id="projects" class="projects-section" aria-labelledby="projects-heading">
+                <div class="container projects-container">
+                    <header class="section-header">
+                        <span class="section-tag">&lt;projects&gt;</span>
+                        <h2 id="projects-heading" class="section-title">Featured Projects</h2>
+                        <p class="section-subtitle">A selection of recent work. Click the links to explore.</p>
+                    </header>
+
+                    <div class="projects-grid">
+
+                        <!-- Project Card 1: Full-Stack Web App -->
+                        <!-- Thumbnail links to GitHub / Live Demo -->
+                        <article class="project-card" id="project-card-1">
+                            <!-- Thumbnail: gradient background; hover reveals "VIEW PROJECT" label -->
+                            <div class="project-thumbnail-placeholder" role="img" aria-label="Full-Stack Web Application preview">
+                                <div class="thumbnail-overlay">&#9654; VIEW PROJECT</div>
+                            </div>
+                            <div class="project-body">
+                                <h3 class="project-title">Full-Stack Web Application</h3>
+                                <p class="project-description">
+                                    A scalable web application featuring authenticated dashboards, dynamic data
+                                    visualization, and automated workflows.
+                                </p>
+                                <!-- Tech stack tags -->
+                                <ul class="project-tech-stack" aria-label="Technologies used">
+                                    <li>React</li>
+                                    <li>Node.js</li>
+                                    <li>PostgreSQL</li>
+                                    <li>Docker</li>
+                                </ul>
+                                <!-- Links that open in a new tab -->
+                                <div class="project-links">
+                                    <a href="#" class="btn-link" target="_blank" rel="noopener noreferrer"
+                                        aria-label="View source code for Project 1">GitHub</a>
+                                    <a href="#" class="btn-link" target="_blank" rel="noopener noreferrer"
+                                        aria-label="View live demo for Project 1">Live Demo &rarr;</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Project Card 2: Cloud-Native Microservice -->
+                        <article class="project-card" id="project-card-2">
+                            <div class="project-thumbnail-placeholder" role="img" aria-label="Cloud-Native Microservice preview">
+                                <div class="thumbnail-overlay">&#9654; VIEW PROJECT</div>
+                            </div>
+                            <div class="project-body">
+                                <h3 class="project-title">Cloud-Native Microservice / API</h3>
+                                <p class="project-description">
+                                    High-performance RESTful API service built for real-time data processing, caching,
+                                    and secure token-based authentication.
+                                </p>
+                                <ul class="project-tech-stack" aria-label="Technologies used">
+                                    <li>Python</li>
+                                    <li>FastAPI</li>
+                                    <li>Redis</li>
+                                    <li>AWS</li>
+                                </ul>
+                                <div class="project-links">
+                                    <a href="#" class="btn-link" target="_blank" rel="noopener noreferrer"
+                                        aria-label="View source code for Project 2">GitHub</a>
+                                    <a href="#" class="btn-link" target="_blank" rel="noopener noreferrer"
+                                        aria-label="View documentation for Project 2">Documentation &rarr;</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Project Card 3: Developer Tool -->
+                        <article class="project-card" id="project-card-3">
+                            <div class="project-thumbnail-placeholder" role="img" aria-label="Developer Tool preview">
+                                <div class="thumbnail-overlay">&#9654; VIEW PROJECT</div>
+                            </div>
+                            <div class="project-body">
+                                <h3 class="project-title">Developer Tool / Utility</h3>
+                                <p class="project-description">
+                                    Open-source CLI tool and browser extension for productivity tracking, code snippet
+                                    sharing, and linting automation.
+                                </p>
+                                <ul class="project-tech-stack" aria-label="Technologies used">
+                                    <li>TypeScript</li>
+                                    <li>Webpack</li>
+                                    <li>CLI</li>
+                                </ul>
+                                <div class="project-links">
+                                    <a href="#" class="btn-link" target="_blank" rel="noopener noreferrer"
+                                        aria-label="View source code for Project 3">GitHub</a>
+                                    <a href="#" class="btn-link" target="_blank" rel="noopener noreferrer"
+                                        aria-label="View package for Project 3">Package &rarr;</a>
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </section>
+            <!-- END PROJECTS SECTION -->
+
+
+            <!-- ===================================================== -->
+            <!-- 5b. YOUTUBE VIDEO HIGHLIGHT SECTION                   -->
+            <!-- Responsive embed using aspect-ratio container.        -->
+            <!-- Update the src URL with your actual YouTube video ID. -->
+            <!-- ===================================================== -->
+            <section id="portfolio-video" class="youtube-section" aria-labelledby="youtube-heading">
+                <div class="container">
+                    <header class="section-header">
+                        <span class="section-tag">&lt;portfolio.highlight&gt;</span>
+                        <h2 id="youtube-heading" class="section-title">Portfolio Highlight</h2>
+                        <p class="section-subtitle">A quick walkthrough of my work and development style.</p>
+                    </header>
+
+                    <div class="youtube-embed-wrapper">
+                        <!-- Responsive 16:9 iframe container -->
+                        <div class="youtube-iframe-container">
+                            <!--
+                                Replace "dQw4w9WgXcQ" with your real YouTube video ID.
+                                The embed URL format: https://www.youtube.com/embed/VIDEO_ID
+                                Example: if your video URL is https://youtu.be/abc123, use:
+                                src="https://www.youtube.com/embed/abc123"
+                            -->
+                            <iframe
+                                id="portfolio-youtube-embed"
+                                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                                title="Arpitha M R — Portfolio Highlight Video"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                        <!-- Short caption describing the video content -->
+                        <p class="youtube-caption">
+                            A short introduction to my portfolio, development workflow, and the projects I'm most
+                            proud of &mdash; showcasing full-stack skills from UI design to cloud deployment.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- END YOUTUBE SECTION -->
+
+
+            <!-- ===================================================== -->
+            <!-- 6. TESTIMONIALS SECTION                               -->
+            <!-- ===================================================== -->
+            <section id="testimonials" class="section testimonials-section" aria-labelledby="testimonials-heading">
+                <div class="container testimonials-container">
+                    <header class="section-header">
+                        <span class="section-tag">&lt;testimonials&gt;</span>
+                        <h2 id="testimonials-heading" class="section-title">Party Member Endorsements</h2>
+                    </header>
+
+                    <div class="testimonials-grid">
+                        <!-- Testimonial 1 -->
+                        <article class="testimonial-card pixel-card">
+                            <div class="card-status-badge">
+                                <span class="star-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                <span class="party-role">TECH LEAD</span>
+                            </div>
+                            <blockquote class="testimonial-quote">
+                                "Arpitha writes exceptionally clean, robust code and approaches complex architectural
+                                challenges with remarkable clarity. A top-tier engineer on any mission!"
+                            </blockquote>
+                            <div class="testimonial-author">
+                                <div class="author-avatar-pixel">&#129489;&#8205;&#128187;</div>
+                                <div class="author-details">
+                                    <h3 class="author-name">Alex R.</h3>
+                                    <p class="author-role">Staff Software Engineer</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Testimonial 2 -->
+                        <article class="testimonial-card pixel-card">
+                            <div class="card-status-badge">
+                                <span class="star-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                <span class="party-role">PRODUCT MGR</span>
+                            </div>
+                            <blockquote class="testimonial-quote">
+                                "Speed, meticulous attention to detail, and a user-first mindset. Arpitha turns
+                                ambiguous requirements into polished web experiences ahead of schedule."
+                            </blockquote>
+                            <div class="testimonial-author">
+                                <div class="author-avatar-pixel">&#128640;</div>
+                                <div class="author-details">
+                                    <h3 class="author-name">Sarah K.</h3>
+                                    <p class="author-role">Senior Product Manager</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Testimonial 3 -->
+                        <article class="testimonial-card pixel-card">
+                            <div class="card-status-badge">
+                                <span class="star-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                <span class="party-role">COLLABORATOR</span>
+                            </div>
+                            <blockquote class="testimonial-quote">
+                                "Great collaborator with strong problem-solving skills and mastery across both frontend
+                                and backend stacks. Working with Arpitha always levels up the entire team."
+                            </blockquote>
+                            <div class="testimonial-author">
+                                <div class="author-avatar-pixel">&#9881;</div>
+                                <div class="author-details">
+                                    <h3 class="author-name">David M.</h3>
+                                    <p class="author-role">Full-Stack Architect</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <!-- END TESTIMONIALS SECTION -->
+
+
+            <!-- ===================================================== -->
+            <!-- 7. INTERACTIVE CHAT SECTION                           -->
+            <!-- ===================================================== -->
+            <section id="chat" class="section chat-section" aria-labelledby="chat-heading">
+                <div class="container chat-container">
+                    <header class="section-header">
+                        <span class="section-tag">&lt;terminal-chat&gt;</span>
+                        <h2 id="chat-heading" class="section-title">Interactive Terminal Chat</h2>
+                    </header>
+
+                    <div class="pixel-chat-window">
+                        <div class="chat-window-header">
+                            <div class="window-status">
+                                <span class="status-indicator"></span>
+                                <span>ARPITHA_BOT_V1.0 // ONLINE</span>
+                            </div>
+                            <span class="chat-header-mode">READY</span>
+                        </div>
+
+                        <!-- Chat Log Screen -->
+                        <div class="chat-messages" id="chat-messages" role="log" aria-live="polite">
+                            <div class="chat-msg msg-bot">
+                                <span class="msg-sender">[ARPITHA.AI]:</span>
+                                <span class="msg-text">Welcome! I'm Arpitha's interactive portfolio assistant. Ask me
+                                    anything about her skills, experience, or projects, or pick a prompt below!</span>
+                            </div>
+                        </div>
+
+                        <!-- Quick Prompt Chips -->
+                        <div class="chat-prompt-chips">
+                            <button type="button" class="prompt-chip" data-query="skills">
+                                <span>&#9889; Primary Skills</span>
+                            </button>
+                            <button type="button" class="prompt-chip" data-query="projects">
+                                <span>&#127918; Featured Projects</span>
+                            </button>
+                            <button type="button" class="prompt-chip" data-query="resume">
+                                <span>&#128190; Download Resume</span>
+                            </button>
+                            <button type="button" class="prompt-chip" data-query="contact">
+                                <span>&#9993; Get In Touch</span>
+                            </button>
+                        </div>
+
+                        <!-- Input Console -->
+                        <form class="chat-input-bar" id="chat-form">
+                            <span class="prompt-symbol">&gt;</span>
+                            <input type="text" id="chat-input" class="chat-input-field"
+                                placeholder="Type a message or command (e.g., 'skills', 'experience')..."
+                                autocomplete="off" required>
+                            <button type="submit" class="pixel-btn pixel-btn-primary chat-send-btn" id="chat-send-btn">
+                                <span>SEND &#9166;</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <!-- END CHAT SECTION -->
+
+
+            <!-- ===================================================== -->
+            <!-- 8. CONTACT SECTION                                    -->
+            <!-- ===================================================== -->
+            <section id="contact" class="contact-section" aria-labelledby="contact-heading">
+                <!-- Direct email, social links, availability status, and contact form -->
+                <div class="container contact-container">
+                    <header class="section-header">
+                        <span class="section-tag">&lt;contact&gt;</span>
+                        <h2 id="contact-heading" class="section-title">Get In Touch</h2>
+                    </header>
+
+
+
+                    <div class="contact-content">
+                        <p class="contact-intro">
+                            Whether you have a question, a project opportunity, or just want to connect, my inbox is
+                            always open. I'll do my best to get back to you!
+                        </p>
+
+                        <!-- Contact Details & Direct Links -->
+                        <div class="contact-methods">
+                            <a href="mailto:your.email@example.com" class="contact-link" id="contact-email">
+                                <span class="contact-label">Email:</span> your.email@example.com
+                            </a>
+                            <span class="contact-separator">&bull;</span>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                                class="contact-link" id="contact-linkedin">
+                                LinkedIn
+                            </a>
+                            <span class="contact-separator">&bull;</span>
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="contact-link"
+                                id="contact-github">
+                                GitHub
+                            </a>
+                        </div>
+
+                        <!-- Contact Form Placeholder -->
+                        <form class="contact-form" id="contact-form" action="#" method="POST">
+                            <div class="form-group">
+                                <label for="contact-name">Name</label>
+                                <input type="text" id="contact-name" name="name" placeholder="Your Name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact-user-email">Email</label>
+                                <input type="email" id="contact-user-email" name="email"
+                                    placeholder="your.email@example.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact-message">Message</label>
+                                <textarea id="contact-message" name="message" rows="5"
+                                    placeholder="Write your message here..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary pixel-btn pixel-btn-primary"
+                                id="btn-submit-contact">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <!-- END CONTACT SECTION -->
+
+        </main>
+
+        <!-- ========================================================= -->
+        <!-- FOOTER                                                    -->
+        <!-- ========================================================= -->
+        <footer id="site-footer" class="site-footer">
+            <div class="container footer-container">
+                <div class="footer-info">
+                    <p class="footer-copy">&copy; 2026 Arpitha M R. Built with semantic HTML &amp; modern pixel art
+                        standards.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#hero" class="back-to-top" id="btn-back-to-top" aria-label="Back to top of page">&uarr;
+                        Back to Top</a>
+                </div>
+            </div>
+        </footer>
+
+    </div> <!-- /.main-layout-wrapper -->
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
